@@ -1,6 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
-import SuperAdmin from './superadmin';
-import { useState, useEffect, useRef } from 'react';
+import { Routes, Route } from "react-router-dom";
+import SuperAdmin from "./superadmin";
+
+function Home() {
+  return <h1>Earth Bowlzz Home ✅</h1>;
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/admin" element={<SuperAdmin />} />
+      <Route path="*" element={<h1>Page Not Found</h1>} />
+    </Routes>
+  );
+}
+
+export default App;
 
 // ════════════════════════════════════════════════
 // 📝 EDIT YOUR BRAND DETAILS HERE
